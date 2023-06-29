@@ -1,0 +1,86 @@
+.recomendation {
+  margin-top: 55px;
+  margin-bottom: 55px;
+
+  font-size: 18px;
+  line-height: 22px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  &__text-custom {
+    color: $color-deep-cerise;
+  }
+
+  &__content {
+    margin-bottom: 30px;
+
+    font-size: 12px;
+    line-height: 16px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 50px;
+
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 415px;
+    }
+  }
+
+  &__video {
+    position: relative;
+
+    margin-left: 0;
+
+    @include media-breakpoint-up(md) {
+      margin-left: 105px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-left: 0;
+    }
+
+    &__iframe {
+      overflow: hidden;
+
+      height: 195px;
+
+      border-radius: 6px;
+
+      @include media-breakpoint-up(md) {
+        height: 340px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 315px;
+      }
+    }
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      bottom: 10px;
+      left: -80px;
+
+      display: none;
+
+      width: 91px;
+      height: 91px;
+
+      background: url("../img/recomendation/smile.svg") no-repeat 50% 50%;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+
+    & iframe {
+      display: block;
+
+      margin: 0;
+    }
+  }
+}

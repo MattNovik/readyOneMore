@@ -1,0 +1,66 @@
+.range {
+  font-size: 1rem;
+
+  &__input {
+    background-color: transparent;
+    width: 60px;
+    text-align: center;
+    border: none;
+  }
+
+  &__top {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  &__separator {
+    margin: 0 5px;
+  }
+
+  &__element {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  & .noUi-horizontal .noUi-handle {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: none;
+    top: calc(50% + 3px);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+    left: auto;
+    right: -7px;
+  }
+
+  & .noUi-horizontal {
+    border: none;
+    height: 7px;
+    background-color: $color-default-white;
+  }
+
+  & .noUi-connect {
+    background-color: $color-ruby;
+  }
+
+  & .noUi-base,
+  & .noUi-connect,
+  & .noUi-connects {
+    height: 7px;
+    border: none;
+    cursor: pointer;
+  }
+
+  & .range .noUi-handle:after,
+  & .noUi-handle:before {
+    display: none;
+  }
+}

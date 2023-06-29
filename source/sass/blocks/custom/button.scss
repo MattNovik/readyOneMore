@@ -1,0 +1,75 @@
+.button {
+  font-size: 1.25rem;
+  padding: 9px 20px;
+  background: 0 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  font-family: $ff-pt-sans;
+
+  &__inner {
+    @include vp-999 {
+      display: none;
+    }
+  }
+
+  & .button__icon_mobile {
+    @include vp-999 {
+      display: block;
+    }
+  }
+
+  &_transparent {
+    border: 1px solid $color-egyptian-blue;
+    color: $color-egyptian-blue;
+    font-weight: 700;
+    font-size: 0.75rem;
+    background-color: transparent;
+
+    &-color {
+      &_white {
+        color: $color-default-white;
+        border: 1px solid $color-default-white;
+      }
+    }
+  }
+
+  &_color {
+    &-blue {
+      background-color: $color-midnight-blue;
+      color: $color-default-white;
+      font-weight: 700;
+      width: 270px;
+      text-align: center;
+      padding: 17px 20px 13px;
+      text-transform: uppercase;
+    }
+
+    &-pink {
+      background-color: $color-razzmatazz;
+      color: $color-default-white;
+    }
+
+    &-white {
+      color: $color-default-white;
+      border: 1px solid $color-default-white;
+    }
+
+    &-red {
+      color: $color-ruby;
+      border: 1px solid $color-ruby;
+    }
+  }
+
+  &__text {
+    color: $color-razzmatazz;
+  }
+
+  & .button__icon_mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,58 @@
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+
+  &-pages {
+    width: 16px;
+    height: 20px;
+    background-image: url(../img/icon-pages.png);
+  }
+
+  &-origin {
+    width: 16px;
+    height: 20px;
+    background-image: url(../img/icon-origin.png);
+  }
+
+  &-search {
+    width: 28px;
+    height: 27px;
+    background-image: url(../img/icon-search.png);
+    margin-top: 5px;
+  }
+
+  &-date {
+    width: 28px;
+    height: 27px;
+    background-image: url(../img/icon-date.png);
+  }
+
+  &-arrow-left {
+    width: 16px;
+    height: 28px;
+    background-image: url(../img/icon-arrow-left.png);
+  }
+
+  &-arrow-right {
+    width: 16px;
+    height: 28px;
+    background-image: url(../img/icon-arrow-left.png);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  &-gift {
+    width: 33px;
+    height: 33px;
+    background-image: url(../img/icon-gift.png);
+  }
+
+  &-settings {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/icon-settings.png);
+  }
+}

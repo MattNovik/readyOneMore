@@ -1,0 +1,60 @@
+.carousel {
+  &__tabs {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-bottom: 1px solid $color-whisper;
+
+    @include vp-539 {
+      overflow-x: scroll;
+      -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+      justify-content: unset;
+    }
+  }
+
+  &__content {
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    padding: 20px 80px;
+    font-size: 1.25rem;
+    color: $color-nero;
+    max-height: 1300px;
+    overflow: hidden;
+
+    @include vp-1419 {
+      padding: 20px 60px;
+    }
+
+    @include vp-799 {
+      padding: 20px 15px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.25rem;
+
+    @include vp-539 {
+      font-size: 1.5rem;
+      line-height: normal;
+    }
+  }
+
+  &__more {
+    text-align: center;
+    display: block;
+    margin: 30px 0 40px;
+    color: $color-pacific-blue;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+}

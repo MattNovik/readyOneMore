@@ -1,0 +1,91 @@
+.btn {
+  &-xs {
+    width: 230px;
+  }
+
+  &-label {
+    display: inline-block;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &-bg {
+    color: $color-default-white;
+
+    &.disabled {
+      background-color: $color-suva-grey;
+    }
+
+    &-blue {
+      background-color: $color-sapphire;
+      color: $color-default-white;
+
+      &:hover {
+        background-color: $color-neon-blue;
+      }
+
+      &:active {
+        background-color: $color-new-midnight-blue;
+      }
+    }
+
+    &-red {
+      background-color: $color-scarlet;
+
+      &:hover {
+        background-color: $color-radical-red;
+      }
+
+      &:active {
+        background-color: $color-carmine;
+      }
+    }
+  }
+
+  &-br {
+    border: 2px solid;
+
+    &.disabled {
+      border-color: $color-suva-grey;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    &-blue {
+      border-color: $color-sapphire;
+      color: $color-default-black;
+
+      &:hover {
+        border-color: $color-neon-blue;
+      }
+
+      &:active {
+        border-color: $color-new-midnight-blue;
+      }
+    }
+
+    &-red {
+      border-color: $color-scarlet;
+
+      &:hover {
+        border-color: $color-radical-red;
+      }
+
+      &:active {
+        border-color: $color-carmine;
+      }
+    }
+  }
+
+  &-nopadd {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+}

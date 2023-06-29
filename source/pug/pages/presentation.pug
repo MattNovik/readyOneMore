@@ -1,0 +1,31 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "presentaion.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +jumbotronInside()
+    +calculator()
+    .bg-grey
+      +recomendation()
+    +working()
+    +warranty()
+    .bg-grey
+      +reviews()
+    .bg-social
+      +achievements()
+    .btnCalculate.js-opencalculate
+      span Калькулятор цены
+
+block modals
+
+

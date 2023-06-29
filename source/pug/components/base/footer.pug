@@ -1,0 +1,63 @@
+mixin footer()
+  footer.footer
+    .footer__container.container
+      .footer__row.row.d-flex
+        .footer__col.col.col-6
+          .footer__row.footer__grid.row.d-flex
+            .footer__col.col
+              nav.footer__nav
+                ul.footer__menu.menu
+                  li.menu__item
+                    a.menu__link(href="<?=$root;?>filter/?typeOfWork=%D0%94%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0") Дипломные
+                  li.menu__item
+                    a.menu__link(href="<?=$root;?>filter/?typeOfWork=%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0") Курсовые
+                  li.menu__item
+                    a.menu__link(href="<?=$root;?>filter/?typeOfWork=%D0%9E%D1%82%D0%B2%D0%B5%D1%82%D1%8B%20%D0%BD%D0%B0%20%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B") Ответы
+                  li.menu__item
+                    a.menu__link(href="<?=$root;?>filter/?typeOfWork=%D0%A0%D0%B5%D1%84%D0%B5%D1%80%D0%B0%D1%82") Рефераты
+                  li.menu__item
+                    a.menu__link(href="<?=$root;?>filter/?typeOfWork=%D0%AD%D1%81%D1%81%D0%B5") Эссе
+              a.footer__number.number(href="tel:") 8(800)511-34-29
+            .footer__col.col
+              .footer__group.footer__address
+                h3.footer__title Наш адрес:
+                p.footer__text Офис в Санкт-Петербурге
+                p.footer__text ул. Введенский канал, д. 7, оф. 424
+                p.footer__text БЦ "Фарватер"
+                p.footer__text (ст. м. Пушкинская)
+              .footer__group.footer__time
+                h3.footer__title График работы:
+                p.footer__text Пн-Пт: 09:00-20:00
+                p.footer__text Cб-Вс: 12:00-16:00
+        .footer__col.col.col-6
+          .footer__row.footer__grid.row.d-flex
+            .footer__col.footer__links.col
+              .footer__group
+                a.footer__link(href="https://studservis.ru/politika-konfidencialnosti/")
+                  | Политика
+                  | конфиденциальности
+              .footer__group
+                a.footer__link(href="https://studservis.ru/dogovor-oferty/") Договор оферты
+              .footer__group
+                a.footer__link(href="https://studservis.ru/bezopasnost-platezhey/") Безопасность платежей
+            .footer__col.col
+              p.footer__text.footer__text_margin ООО "Студсервис"
+              p.footer__text.footer__text_margin ИНН 7820312056 / ОГРН 1077847598795
+              p.footer__text.footer__text_margin © Студсервис. Все права защищены.
+          form.footer__form.form.sendToCrmSubscribe(action="#")
+            .form__grid.d-flex
+              .form__group.col
+                p.form__text
+                  span(style="font-size: 110%") 300 ₽
+                  =' '
+                  | на первый заказ
+              .form__group.form__group_small
+                input.form__element.form__input(type="text" name="email" placeholder="Электронная почта")
+              div.form__group
+                button.form__button.button.button_color-pink(type="submit") Узнать скидку
+        ul.footer__social.social.d-flex
+          li.social__item
+            a.social__link(href="https://vk.com/referat")
+              img.social__image(src="<?=$root;?>img/vk.png" alt="")
+    +popupCalculator()
+

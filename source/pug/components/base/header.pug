@@ -1,0 +1,30 @@
+mixin header()
+  .header
+    .header__container.container
+      .header__grid.d-flex
+        .header__col.header__left.d-flex
+          .header__button.button.header__hamburger.hamburger.d-flex
+            .hamburger-box
+              .hamburger-inner
+            .hamburger__text Выберите тип работы
+            ul.hamburger__list
+              li.hamburger__li
+                a.hamburger__link(href="")
+          ul.header__social.social
+            li.social__item
+              a.social__link(href="https://vk.com/referat")
+                img.social__image(src="img/vk.png" alt="")
+            li.social__item
+              a.social__link(href="https://vk.com/referat")
+                img.social__image(src="img/ok.png" alt="")
+        .header__col.header__center
+          a.header__link(href="/")
+            img.header__logo(src="img/logo_gr.svg" alt="")
+        .header__col.header__right.d-flex
+          a.header__button.header__button_order.button.button_color-pink(href="#" target="_blank") Заказать работу
+          a.header__button.header__button_info.button.show-popup(href="#popup-gift")
+            p.button__inner
+              span.button__text 300 рублей
+              =' '
+              | на первый заказ
+            span.button__icon.button__icon_mobile.icon.icon-gift

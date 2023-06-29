@@ -1,0 +1,12 @@
+.term {
+  font-size: 0.6875rem;
+  line-height: 1;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+
+  &__link {
+    color: inherit;
+    font-size: inherit;
+  }
+}

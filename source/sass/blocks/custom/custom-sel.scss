@@ -1,0 +1,53 @@
+.custom-sel {
+  position: relative;
+
+  &__box {
+    position: relative;
+    line-height: 33px;
+    padding-right: 35px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      border-color: $color-default-black transparent transparent;
+      border-style: solid;
+      border-width: 4px;
+      margin-top: -2px;
+    }
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: $color-default-white;
+    border: 1px solid $color-silver;
+    border-top: none;
+    font-size: 0.875rem;
+    max-height: 129px;
+  }
+
+  &__item {
+    padding: 0 15px;
+    line-height: 43px;
+    border-bottom: 1px solid $color-silver;
+
+    &:hover {
+      background-color: $color-whisper;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &.active {
+    & .custom-sel__list {
+      display: block;
+    }
+  }
+}

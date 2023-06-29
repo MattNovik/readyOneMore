@@ -1,0 +1,67 @@
+mixin calculator()
+  #calculatorContainer.calculator
+    .container
+      .row
+        .col-12.col-lg-7.order-2.order-lg-1
+          .calculator__title Узнайте стоимость бесплатно
+          .calculator__desc Выбор работы
+          .calculator__steps
+            form#calculatorForm(action='')
+              .calculator__steps__item.current
+                select.form__field(type='text', placeholder='Тип работы', name='work')
+                  option(value='Вариант 1', disabled.checked) Тип работы
+                  option(value='Вариант 2') Вариант 2
+                  option(value='Вариант 3') Вариант 3
+                  option(value='Вариант 4') Вариант 4
+                input.form__field.js-required(type='text', placeholder='Предмет *', name='subject')
+                input.form__field(type='text', placeholder='Тема ', name='theme')
+                input#filter-agreement(type='checkbox', name='', checked)
+                label.form__field__label(for='filter-agreement') Нажимая кнопку "Узнать стоимость", вы соглашаетесь с
+                  =' '
+                  a(href='') политикой конфиденциальности
+                .calculator__row
+                    button.btn.btn-lg.btn-block.btn-primary.text-uppercase.js-steps-next(type='button', required)
+                      | Продолжить
+              .calculator__steps__item
+                label.form__field-group-files(
+                  for='file-upload',
+                  data-placeholder='Прикрепите файл'
+                )
+                  input#file-upload(
+                    name='files',
+                    multiple,
+                    type='file',
+                    placeholder='Прикрепите файл'
+                  )
+                #file-upload-list.form__files-list
+                textarea.form__textfield(placeholder='Введите доп. требования', name='comment')
+                .calculator__row
+                    button.btn.btn-lg.btn-block.btn-primary.text-uppercase.js-steps-next(type='button', required)
+                      | Продолжить
+                    button.btn.btn-lg.btn-block.btn-outline-primary.text-uppercase.js-steps-next(type='button')
+                      | Пропустить
+              .calculator__steps__item
+                input.form__field.js-required(type='text', placeholder='ваше имя *', name='name')
+                input.form__field.js-required(type='text', placeholder='ваш e-mail *', name='email')
+                input#phonefield.form__field.js-required(
+                  type='text',
+                  placeholder='+7 (___) ___-__-__ *',
+                  name='phone'
+                )
+                .calculator__row
+                    button.btn.btn-lg.btn-block.btn-primary.text-uppercase.js-steps-submit(type='submit')
+                      | Отправить
+        .col-12.col-lg-5.order-1.order-lg-2.d-flex.flex-column
+          .calculator__steps-menu.order-2.order-lg-1
+            ul
+              li.current Выбор работы
+              li Детали работы
+              li Контакты для связи
+          .calculator__progress.order-1.order-lg-2
+            h5.calculator__progress__title.order-2.order-lg-1 Процент заполнения
+              .calculator__progress__procents 0
+            .calculator__progress__line.order-1.order-lg-2
+              .calculator__progress__line__green(style='width: 0%')
+              .calculator__progress__line__grey(style='width: 33%')
+
+            .calculator__progress__info.order-3.order-lg-3 +33% за 1й шаг

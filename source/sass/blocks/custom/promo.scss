@@ -1,0 +1,137 @@
+.promo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 130px 0 70px;
+  min-height: 820px;
+
+  @include vp-1419 {
+    background-position: center;
+  }
+
+  @include vp-1239 {
+    background-position: center;
+  }
+
+  @include vp-999 {
+    padding: 60px 0 70px;
+    min-height: auto;
+    background-position: top;
+  }
+
+  @include vp-799 {
+    padding: 40px 0;
+  }
+
+  &-catalog {
+    & .search {
+      &__input {
+        @include vp-799 {
+          width: 100%;
+        }
+
+        &_main {
+          @include vp-999 {
+            width: 33.33%;
+          }
+        }
+
+        &_second {
+          @include vp-999 {
+            width: 33.33%;
+          }
+
+          @include vp-767 {
+            margin-left: 0;
+          }
+        }
+      }
+
+      &__bottom {
+        @include vp-799 {
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  &__container {
+    max-width: 1260px;
+
+    @include vp-999 {
+      max-width: 100%;
+    }
+  }
+
+  &__search {
+    margin: 51px 0 0;
+
+    @include vp-999 {
+      margin: 22px 0 0;
+    }
+  }
+
+  &__title {
+    font-size: 4.5rem;
+    line-height: 5.625rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    max-width: 705px;
+    color: $color-default-white;
+    font-family:$ff-gotham-pro;
+    text-decoration: underline;
+
+    @include vp-999 {
+      max-width: 100%;
+      font-size: 1.875rem;
+      line-height: normal;
+    }
+
+    @include vp-799 {
+      text-align: center;
+      line-height: 2.125rem;
+    }
+
+    & .title__text {
+      color: $color-paua;
+      display: inline;
+      text-decoration: underline;
+    }
+  }
+
+  &__description {
+    margin: 75px 0 0;
+    color: $color-default-white;
+
+    @include vp-999 {
+      margin: 22px 0 0;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__link {
+    margin: 28px 0 0;
+    color: $color-paua;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include vp-999 {
+      color: $color-default-white;
+      font-size: 1.5rem;
+    }
+
+    @include vp-799 {
+      font-size: 1.125rem;
+    }
+  }
+
+  & .features-promo {
+    margin: 35px auto 0 10%;
+    padding: 0 10px;
+
+    @include vp-1419 {
+      margin: 35px auto 0;
+    }
+  }
+}

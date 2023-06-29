@@ -1,0 +1,87 @@
+mixin catalogCard()
+  section.catalog.catalog-card
+    .catalog__container
+      .catalog__grid.d-flex
+        aside.catalog__sidebar.sidebar.col-4
+          .sidebar__similar.sidebar__item.similar
+            .similar__top
+              h2.similar__title.title.title_h2 Похожие работы:
+            ul.goods__list.similar__list.similar-list-js.list
+              li.goods__item
+                .goods__header.row.d-flex
+                  .goods__col.goods__left.col.d-flex
+                    p.goods__type.goods__text
+                    p.goods__theme.goods__text
+                p.goods__name
+                  a(href="#")
+                .goods__bottom.row.d-flex
+                  .goods__buttons.col.d-flex
+                    a.goods__button.goods__more.button(href="") Подробнее
+                    a.show-popup.goods__button.goods__link.button(href="#popup-download" onclick="createOrder(); return false;") Скачать в 1 клик
+          .sidebar__banner.sidebar__item.banner-first.banner-down.d-flex
+            img.banner-first__image(src="img/banner-first_back.jpg" alt="")
+            p.banner-first__text Уже пробовали Студсервис?
+            h3.banner-first__title.sidebar__title.title.title_h3
+              | Получите
+              <br>
+              span 300
+                b ₽
+              | на первый заказ
+            a.banner-first__button.button.button_color-blue.show-popup(href="#popup-gift") Узнать стоимость
+        .catalog__goods.goods.card.col-8
+          .goods__top
+            h1.goods__title.title.title_h1
+            .card__top.d-flex
+              p.card__type
+              a.card__link.show-popup(href="#popup-gift") Хотите заказать работу на тему
+            .card__body.row.wrap.d-flex
+              p.card__pages.col.card__text.d-flex
+                span.goods__icon.icon.icon-pages
+                span
+              p.card__origin.col.card__text.d-flex
+                span.goods__icon.icon.icon-origin
+                span
+              p.card__date.col.card__text.d-flex
+                span.goods__icon.icon.icon-date
+                span Добавлена
+            .card__info.d-flex
+              p.card__price.card__price_main.price__main
+                b ₽
+              p.card__price.card__price_old.price__old
+                b ₽
+            .card__buttons.d-flex
+              a.goods__button.goods__more.button(href="/gotovye-raboty/download/") Скачать превью
+              a.goods__button.goods__link.button.show-popup(href="#popup-download" onclick="createOrder(); return false;") Скачать в 1 клик
+            .card__main.carousel
+              .carousel__tabs.tabs.d-flex
+                button.tabs__button.tabs__button_left.d-flex(type="button")
+                  span.icon.icon-arrow-left
+                ul.tabs__list.d-flex
+                  li.tabs__item(data-tab-category="0")
+                    button.tabs__link(type="button") Содержание
+                  li.tabs__item.tabs__item_active(data-tab-category="1")
+                    button.tabs__link(type="button") Часть работы
+                  li.tabs__item(data-tab-category="2")
+                    button.tabs__link(type="button") Список литературы
+                button.tabs__button.tabs__button_right.d-flex(type="button")
+                  span.icon.icon-arrow-right
+              .carousel__slider
+                .card__slide(data-tab-content="0")
+                  h2.carousel__title.title.title_center.title_h2 Фрагмент для ознакомления 1
+                  .carousel__content
+                .card__slide.is-open(data-tab-content="1")
+                  h2.carousel__title.title.title_center.title_h2 Фрагмент для ознакомления 2
+                  .carousel__content
+                  .carousel__more.center-text Показать больше
+
+                .card__slide(data-tab-content="2")
+                  h2.carousel__title.title.title_center.title_h2 Фрагмент для ознакомления 3
+                    .carousel__content
+            ul.carousel__dots.dots
+              button.dots__item.owl-dot(data-tab-nav="0")
+                span
+              button.dots__item.owl-dot.active(data-tab-nav="1")
+                span
+              button.dots__item.owl-dot(data-tab-nav="2")
+                span
+

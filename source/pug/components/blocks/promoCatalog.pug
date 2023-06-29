@@ -1,0 +1,35 @@
+mixin promoCatalog()
+  section.promo.promo-catalog(style="background-image: url('img/back-catalog.jpg')")
+    .promo__container.container
+      h1.promo__title.title.title_h1
+        | в базе
+        a.title__text(href="/gotovye-raboty/")
+        | примеров готовых работ
+      .promo__search.search
+        form.sendToCrmTop(action="")
+          .search__form.d-flex
+            input(type="hidden" name="typeOfWork" value="")
+            input.search__input.search__input_main(type="text" name="theme" placeholder="Тема работы")
+            input.search__input.search__input_second(type="text" name="email" placeholder="Электронная почта")
+            button.search__button(type="submit") Рассчитать
+          .search__bottom.d-flex
+            p.search__popular
+              | Интересует
+              span
+            .search__term.term
+              input.styled-checkbox#styled-checkbox-22(type="checkbox" value="1" checked="checked" name="agree")
+              label(for="styled-checkbox-22")
+                | Нажимая кнопку "Рассчитать", вы соглашаетесь
+                =' '
+                a(href="https://studservis.ru/politika-konfidencialnosti/" target="_blank") с политикой конфиденциальности
+          .error-block
+      ul.promo__features.features-promo.list.d-flex
+        li.features-promo__item
+          img.features-promo__icon(src="img/features__icon_5.png" alt="")
+          p.features-promo__text Оставьте заявку на Дипломную работу
+        li.features-promo__item
+          img.features-promo__icon(src="img/features__icon_2.png" alt="")
+          p.features-promo__text Получите бесплатную консультацию по написанию
+        li.features-promo__item
+          img.features-promo__icon(src="img/features__icon_4.png" alt="")
+          p.features-promo__text Сделайте заказ и скачайте результат на сайте

@@ -1,0 +1,424 @@
+.services {
+  &__header {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-top: auto;
+
+    @include vp-999 {
+      position: relative;
+      min-width: 290px;
+      max-width: 290px;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    @include vp-539 {
+      height: auto;
+      width: 100%;
+      min-width: auto;
+      max-width: 100%;
+    }
+  }
+
+  &__col {
+    @include vp-1419 {
+      width: auto;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+      flex: 1 0;
+      max-width: 66.66%;
+    }
+
+    @include vp-999 {
+      max-width: 100%;
+      width: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+    }
+  }
+
+  &__container {
+    @include vp-539 {
+      margin: 0 auto;
+    }
+  }
+
+  &__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 18px 45px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+
+    @include vp-1419 {
+      padding: 20px 30px;
+    }
+
+    @include vp-1239 {
+      margin: 0;
+    }
+
+    @include vp-539 {
+      padding: 20px 15px 25px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__row {
+    @include vp-999 {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__count {
+    top: 18px;
+    left: 50px;
+    position: absolute;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include vp-999 {
+      left: 15px;
+      right: auto;
+    }
+
+    &_right {
+      left: auto;
+      right: 50px;
+    }
+
+    &_left {
+      right: auto;
+      left: 50px;
+    }
+
+    &_color {
+      &-red {
+        color: $color-ruby;
+      }
+    }
+  }
+
+  &__image {
+    @include vp-1419 {
+      margin: 0 auto;
+    }
+
+    &_full {
+      width: 100%;
+      height: 100%;
+      max-height: 170px;
+      -o-object-fit: cover;
+      object-fit: cover;
+
+      @include vp-1239 {
+        min-height: 170px;
+      }
+
+      @include vp-999 {
+        max-height: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__name {
+    font-family: $ff-gotham-pro;
+    font-size: 1.375rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: auto 0 0;
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    margin: 11px 0 20px;
+  }
+
+  &__button {
+    margin-top: auto;
+    border: 1px solid $color-deep-cerise;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__grid {
+    @include vp-999 {
+      width: 100%;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    color: $color-default-white;
+
+    @include vp-1419 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+      max-width: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+
+    @include vp-1239 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    @include vp-999 {
+      max-width: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      min-height: 240px;
+    }
+
+    @include vp-539 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+
+    &_small {
+      max-width: 385px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    &_large {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+
+      @include vp-1419 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+      }
+
+      @include vp-999 {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+
+      & .services__image {
+        @include vp-1419 {
+          max-height: 170px;
+        }
+
+        @include vp-999 {
+          max-height: 250px;
+        }
+      }
+
+      & .services__header {
+        @include vp-1419 {
+          border-bottom: 2px solid;
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+
+        @include vp-999 {
+          border: none;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          align-items: flex-end;
+          width: auto;
+        }
+
+        @include vp-539 {
+          border-bottom: 2px solid;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    &_reverse {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      padding-right: 110px;
+
+      @include vp-1449 {
+        padding-right: 50px;
+      }
+
+      @include vp-1419 {
+        padding-right: 0;
+      }
+    }
+
+    &_default {
+      padding-left: 50px;
+
+      @include vp-1419 {
+        padding-left: 0;
+      }
+    }
+
+    &_color {
+      &-purple {
+        background-color: $color-london-hue;
+      }
+
+      &-yellow {
+        background-color: $color-chartreuse-yellow;
+        color: $color-ruby;
+      }
+
+      &-orange {
+        background-color: $color-tree-poppy;
+      }
+
+      &-blue {
+        background-color: $color-maliby;
+
+        @include vp-999 {
+          -webkit-box-ordinal-group: -2;
+          -ms-flex-order: -3;
+          order: -3;
+        }
+      }
+
+      &-pink {
+        background-color: $color-kobi;
+        height: 100%;
+      }
+    }
+  }
+
+  &__right {
+    min-width: 380px;
+
+    @include vp-1419 {
+      max-width: 33.33%;
+    }
+
+    @include vp-539 {
+      min-width: 100%;
+    }
+
+    & .services__item {
+      padding: 45px 15px 18px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+
+      @include vp-1419 {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+
+      @include vp-1239 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      @include vp-999 {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding: 0;
+      }
+
+      @include vp-539 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+      }
+    }
+
+    & .services__content {
+      padding: 52px 35px 0;
+
+      @include vp-999 {
+        padding: 20px 30px;
+      }
+
+      @include vp-539 {
+        padding: 20px 15px 25px;
+      }
+    }
+  }
+}

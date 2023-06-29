@@ -1,0 +1,25 @@
+.breadcrumbs {
+  font-size: 1.25rem;
+  color: $color-tuna;
+
+  @include vp-799 {
+    display: none;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__item {
+    margin: 5px 0;
+
+    &:after {
+      content: "/";
+      margin: 0 3px;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }
+}

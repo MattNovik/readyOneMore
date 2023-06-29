@@ -1,0 +1,18 @@
+.social {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  &__link {
+    color: $color-default-white;
+    padding: 4px;
+  }
+
+  &__item {
+    margin: 0 14px;
+
+    @include vp-1419 {
+      margin: 0 5px;
+    }
+  }
+}

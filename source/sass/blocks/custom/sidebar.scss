@@ -1,0 +1,110 @@
+.sidebar {
+  &__filter {
+    min-height: 520px;
+    background-color: $color-paua;
+
+    @include vp-1239 {
+      position: relative;
+      min-height: auto;
+      padding: 33px 20px;
+    }
+
+    @include vp-539 {
+      padding: 15px;
+    }
+
+    &:after {
+      @include vp-1239 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: -100%;
+        left: auto;
+      }
+    }
+
+    &:before {
+      @include vp-1239 {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+      }
+    }
+  }
+
+  &__banner {
+    min-height: 771px;
+    background-color: $color-aqua-spring;
+  }
+
+  &__item {
+    padding: 21px 40px 45px;
+  }
+
+  &__title {
+    font-family: $ff-gotham-pro;
+    color: $color-midnight-express;
+    font-size: 3.375rem;
+    line-height: 3.875rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include vp-1449 {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+
+    @include vp-1419 {
+      font-size: 2.25rem;
+      line-height: normal;
+    }
+
+    & span {
+      color: $color-razzmatazz;
+    }
+
+    & b {
+      font-family: $ff-pt-sans;
+    }
+  }
+
+  &__form {
+    margin: 265px auto 0;
+    width: 405px;
+
+    @include vp-1419 {
+      max-width: 100%;
+    }
+  }
+
+  &__similar {
+    padding: 0;
+  }
+
+  &__form {
+    & .form__input {
+      height: 72px;
+      font-size: 20px;
+      font-weight: 400;
+      padding: 0 17px;
+    }
+
+    & .form__button {
+      text-transform: uppercase;
+      width: 100%;
+      padding: 22px 20px 23px;
+      font-weight: 700;
+      margin: 20px 0 0;
+    }
+  }
+}

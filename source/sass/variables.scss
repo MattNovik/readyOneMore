@@ -1,0 +1,142 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
+$color-accent-main: #2c39f2;
+$color-accent-second: #212121;
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+$blue: #0a71cc;
+$green: #b3da26;
+$dark: #313845;
+$light: #f2f2f2;
+
+$color-neon-blue: #2c39f2;
+$color-torch-red: #ff1553;
+
+$color-light-grey: #d3d3d3;
+$color-suva-grey: #929292;
+$color-midnight-express: #0c0c48;
+$color-tuna: #45494e;
+$color-sapphire: #021a76;
+$color-neon-blue: #3c4afa;
+$color-new-midnight-blue: #0814a6;
+$color-midnight-blue: #0c0c48;
+$color-scarlet: #fd2b1c;
+$color-radical-red: #fc3752;
+$color-carmine: #a8001c;
+$color-egyptian-blue: #173091;
+$color-razzmatazz: #f70376;
+$color-ruby: #d40272;
+$color-whisper: #ededed;
+$color-nobel: #a1a1a1;
+$color-nero: #222222;
+$color-pacific-blue: #0193c2;
+$color-silver: #bbb;
+$color-paua: #141448;
+$color-gainsboro: #ddd;
+$color-white-smoke: #f8f8f8;
+$color-iris-blue: #01b9df;
+$color-venus: #918485;
+$color-deep-pink: #f70976;
+$color-dim-gray: #707070;
+$color-black-russian: #202124;
+$color-deep-cerise: #f32478;
+$color-london-hue: #aa7ead;
+$color-chartreuse-yellow: #e5e500;
+$color-tree-poppy: #e08036;
+$color-maliby: #5db9df;
+$color-kobi: #e188ae;
+$color-aqua-spring: #e4e5e4;
+$color-red: #ff0000;
+$color-islamic-green: #15ab07;
+$color-patterns-blue: #dee2e6;
+$color-heather: #abb5be;
+$color-link-water: #c8cdd2;
+$color-red-orange: #ff3333;
+$color-snow: #fafafa;
+$color-puerto-rico: #3fb8af;
+$color-desert-storm: #e8e7e6;
+$color-pink-swan: #b8b8b8;
+$color-very-light-gray: #ccc;
+$color-dark-gray: #aaa;
+$color-gold: #ffd304;
+$color-raven: #68717a;
+
+$red: red;
+
+$grid-gutter-width: 20px;
+$container-max-widths: (
+  sm: 540px,
+  md: 758px,
+  lg: 960px,
+  xl: 1140px,
+) !default;
+$input-btn-padding-y-sm: 0.35rem;
+$input-btn-padding-x-sm: 1.15rem;
+$input-btn-padding-y-lg: 0.6rem;
+$btn-font-size-lg: 16px;
+$btn-line-height-lg: 19px;
+$btn-padding-y-lg: 15.5px;
+$btn-border-radius-lg: 6px;
+
+// Gradient
+
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default: 16px;
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-rouble: "Rouble", "Arial", sans-serif;
+
+$ff-pt-sans: "PT Sans", "Arial", sans-serif;
+$ff-proxima-nova: "Proxima Nova", "Arial", sans-serif;
+$ff-gotham-pro: "Gotham Pro", "Arial", sans-serif;
+
+$ff-placeholder: "Placeholder", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600: 0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-320: 320px;
+$vp-375: 375px;
+$vp-480: 480px;
+$vp-540: 540px;
+$vp-768: 768px;
+$vp-800: 800px;
+$vp-1000: 1000px;
+$vp-1024: 1024px;
+$vp-1240: 1240px;
+$vp-1280: 1280px;
+$vp-1420: 1420px;
+$vp-1440: 1440px;
+$vp-1450: 1450px;
+$vp-1700: 1700px;
+$vp-1920: 1920px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

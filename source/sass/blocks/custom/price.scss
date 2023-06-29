@@ -1,0 +1,36 @@
+.price {
+  &__main {
+    color: $color-ruby;
+    font-size: 1.875rem;
+    font-weight: 700;
+    font-family: $ff-gotham-pro;
+  }
+
+  &__old {
+    position: relative;
+    margin-left: 26px;
+    font-size: 1.75rem;
+    font-family: $ff-gotham-pro;
+
+    @include vp-999 {
+      margin-left: 20px !important;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 110%;
+      height: 2px;
+      background-color: $color-ruby;
+      top: 40%;
+      left: 0;
+      -webkit-transform: translateY(-50%) rotate(-10deg);
+      -ms-transform: translateY(-50%) rotate(-10deg);
+      transform: translateY(-50%) rotate(-10deg);
+    }
+
+    & b {
+      font-weight: 400;
+    }
+  }
+}

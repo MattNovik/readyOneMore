@@ -1,0 +1,93 @@
+.popular {
+  padding: 75px 0 90px;
+
+  @include vp-1239 {
+    padding: 20px 0 35px;
+  }
+
+  &__item {
+    background-color: $color-white-smoke;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 25%;
+    flex: 1 0 25%;
+    max-width: 25%;
+    padding: 35px 35px 30px;
+    border: 1px solid $color-whisper;
+    min-width: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    @include vp-1239 {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 50.5%;
+      flex: 1 0 50.5%;
+      max-width: 50%;
+    }
+
+    @include vp-539 {
+      max-width: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+    }
+  }
+
+  &__header {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  &__inner {
+    margin-left: 20px;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $color-iris-blue;
+  }
+
+  &__description {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-venus;
+  }
+
+  &__button {
+    font-size: 1.25rem;
+    margin: 20px auto 0;
+    width: 245px;
+    padding: 14px 10px 13px;
+
+    &:hover {
+      background-color: $color-razzmatazz;
+      color: $color-default-white;
+    }
+  }
+
+  &__more {
+    font-size: 1.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    text-decoration: underline;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-default-black;
+    }
+  }
+
+  & .popular__list {
+    padding: 20px 0 10px;
+  }
+}

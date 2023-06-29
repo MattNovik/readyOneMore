@@ -1,0 +1,219 @@
+.servicies {
+  &__catalog {
+    margin-top: 0;
+    margin-bottom: 55px;
+    padding: 0 15px;
+
+    & .container {
+      @media (min-width: 1200px) {
+        max-width: 1826px;
+      }
+
+      & .row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: auto;
+
+        @include vp-1419 {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include vp-999 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include vp-799 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include vp-479 {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 60px;
+      padding: 0;
+    }
+
+    &__item {
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      justify-content: space-between;
+
+      margin-bottom: 0;
+      padding: 0 20px 30px;
+
+      border: 1px solid #dee2e6;
+      transition: all 0.5s ease-out;
+
+      &:before {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        width: 0;
+        height: 5px;
+
+        background-color: $color-deep-cerise;
+        transition: width 0.5s ease-out;
+      }
+
+      &:hover {
+        z-index: 10;
+
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+
+        &:before {
+          content: "";
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
+          display: block;
+
+          width: 100%;
+          height: 5px;
+
+          background-color: $color-deep-cerise;
+          transition: width 0.3s ease-in;
+        }
+      }
+
+      & .btn-success {
+        background-color: $color-deep-cerise;
+        border-color: $color-deep-cerise;
+        border-radius: 0;
+        font-weight: 700;
+        font-family: $ff-pt-sans;
+        font-size: 1.25rem;
+      }
+
+      &__pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 151px;
+        margin-right: -20px;
+        margin-bottom: 30px;
+        margin-left: -20px;
+
+        background-color: #f2f2f2;
+      }
+
+      &__desc {
+        margin-bottom: 22px;
+
+        font-size: 16px;
+        line-height: 26px;
+
+        color: #68717a;
+
+        & h4 {
+          margin-bottom: 6px;
+
+          font-size: 18px;
+          line-height: 24px;
+          font-family: inherit;
+
+          color: #343434;
+
+          text-transform: none;
+          & a {
+            color: #343434;
+            text-decoration: none;
+          }
+        }
+
+        & p {
+          margin: 8px 0;
+
+          &:first-of-type {
+            margin-top: 6px;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      & .btn {
+        margin-top: auto;
+
+        text-transform: uppercase;
+
+        color: $color-default-white;
+
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &:nth-child(6n + 6) {
+        border-right: 1px solid #dee2e6;
+      }
+
+      &:nth-child(1n + 1) {
+        border-bottom: none;
+      }
+
+      &:nth-last-child(-n + 6) {
+        border-bottom: 1px solid #dee2e6;
+
+        @include vp-1419 {
+          border-bottom: none;
+        }
+      }
+
+      &:nth-last-child(-n + 4) {
+        @include vp-1419 {
+          border-bottom: 1px solid #dee2e6;
+        }
+
+        @include vp-999 {
+          border-bottom: none;
+        }
+      }
+
+      &:nth-last-child(-n + 3) {
+        @include vp-999 {
+          border-bottom: 1px solid #dee2e6;
+        }
+
+        @include vp-799 {
+          border-bottom: none;
+        }
+      }
+
+      &:nth-last-child(-n + 2) {
+        @include vp-799 {
+          border-bottom: 1px solid #dee2e6;
+        }
+
+        @include vp-479 {
+          border-bottom: none;
+        }
+      }
+
+      &:nth-last-child(-n + 1) {
+        @include vp-479 {
+          border-bottom: 1px solid #dee2e6;
+        }
+      }
+    }
+  }
+}

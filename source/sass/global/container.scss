@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include vp-1419 {
+    max-width: 1200px;
+  }
+
+  @include vp-1239 {
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  @include vp-999 {
+    max-width: 770px;
+    width: 100%;
+  }
+
+  @include vp-799 {
+    max-width: 520px;
+  }
+
+  &-middle {
+    width: 1280px;
+  }
+
+  &-max {
+    width: 100%;
+    max-width: 1930px;
+    padding: 0;
+  }
+
+  &-fluid {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

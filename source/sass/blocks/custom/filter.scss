@@ -1,0 +1,215 @@
+.filter {
+  &__title {
+    color: $color-default-white;
+    margin-bottom: 55px;
+    font-family: $ff-gotham-pro;
+    font-size: 1.5625rem;
+    font-weight: 900;
+
+    @include vp-1419 {
+      margin-bottom: 22px;
+      font-size: 1.5625rem;
+      line-height: normal;
+    }
+
+    &_mobile {
+      display: none;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+
+      @include vp-1239 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        line-height: normal;
+        margin: 0;
+        cursor: pointer;
+      }
+
+      @include vp-539 {
+        font-size: 1.125rem;
+      }
+
+      & .icon {
+        @include vp-1239 {
+          margin-left: 40px;
+          -ms-flex-negative: 0;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    &_desktop {
+      @include vp-1239 {
+        display: none;
+      }
+    }
+  }
+
+  &__range {
+    padding-left: 5px;
+    padding-right: 30px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    position: relative;
+    height: 60px;
+    font-size: 1.25rem;
+    background-color: $color-default-white;
+
+    @include vp-539 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__select {
+    position: relative;
+    height: 60px;
+    font-size: 1.25rem;
+    background-color: $color-default-white;
+
+    & .select {
+      & .select-styled {
+        @include vp-539 {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+
+  &__hidden {
+    @include vp-1239 {
+      display: none;
+    }
+
+    & .show {
+      @include vp-1239 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+    }
+  }
+
+  &__select {
+    & .select {
+      position: static;
+
+      &:before {
+        right: 30px;
+      }
+
+      & .from-select {
+        border: none;
+      }
+
+      & .form__select,
+      & .select-styled {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: $color-tuna;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+
+    & .select-box {
+      position: static;
+
+      &:before {
+        right: 30px;
+      }
+
+      & .form-select {
+        border: none;
+      }
+
+      & .form__select,
+      & .select-styled {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: $color-tuna;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    & .btn.btn-primary.btn-filter {
+      color: $color-default-white;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    @include vp-1239 {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
+      display: block;
+      max-width: 50%;
+    }
+
+    @include vp-999 {
+      max-width: 100%;
+      width: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  & .filter__list {
+    @include vp-1239 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 20px -10px 10px;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    @include vp-539 {
+      -webkit-box-flex: 1;
+      -ms-flex: auto;
+      flex: auto;
+      display: block;
+    }
+  }
+
+  & .filter__input {
+    height: 56px;
+  }
+}

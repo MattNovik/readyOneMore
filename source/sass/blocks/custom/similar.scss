@@ -1,0 +1,109 @@
+.similar {
+  @include vp-1239 {
+    overflow: hidden;
+  }
+
+  &__title {
+    color: $color-nobel;
+    font-family: $ff-gotham-pro;
+    font-size: 1.5625rem;
+    font-weight: 900;
+  }
+
+  &__top {
+    padding: 20px 40px 70px;
+
+    @include vp-1699 {
+      padding: 40px 15px;
+    }
+
+    @include vp-1239 {
+      padding: 35px 15px;
+    }
+  }
+
+  & .goods__item {
+    padding-left: 65px;
+    padding-right: 65px;
+
+    @include vp-1699 {
+      padding: 45px 15px;
+    }
+
+    @include vp-1239 {
+      border: 1px solid $color-gainsboro;
+    }
+  }
+
+  & .goods__name {
+    @include vp-1699 {
+      margin: 12px 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  & .goods__buttons {
+    @include vp-1699 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    @include vp-1239 {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin: 0 -5px;
+    }
+
+    @include vp-539 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+  }
+
+  & .goods__button {
+    @include vp-1699 {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    @include vp-1239 {
+      margin: 0 5px;
+      padding: 14px 20px 13px;
+    }
+  }
+
+  & .goods__link {
+    @include vp-1699 {
+      margin-left: 0;
+    }
+  }
+
+  & .goods__left {
+    @include vp-1699 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+    }
+  }
+
+  & .goods__theme {
+    @include vp-1699 {
+      margin: 5px 0;
+    }
+  }
+}

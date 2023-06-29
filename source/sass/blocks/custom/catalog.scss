@@ -1,0 +1,143 @@
+.catalog {
+  @include vp-1239 {
+    overflow: hidden;
+  }
+
+  & .catalog__pagination {
+    margin: 34px auto 0;
+    padding: 0 15px;
+    max-width: 800px !important;
+
+    @include vp-999 {
+      padding: 0 15px;
+    }
+  }
+
+  & .goods__button {
+    @include vp-539 {
+      width: 100%;
+      margin: 10px 0 0;
+    }
+  }
+
+  & .goods__link {
+    @include vp-539 {
+      margin-left: 0;
+    }
+  }
+
+  & .goods__breadcrumbs {
+    @include vp-539 {
+      display: none;
+    }
+  }
+
+  &__goods {
+    @include vp-1239 {
+      width: 100%;
+    }
+  }
+
+  &__sidebar {
+    @include vp-1239 {
+      width: 100%;
+    }
+
+    & .banner-first {
+      @include vp-1239 {
+        display: none;
+      }
+    }
+
+    & .banner-second {
+      @include vp-1239 {
+        display: none;
+      }
+    }
+  }
+
+  &__container {
+    @include vp-1239 {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    @include vp-999 {
+      padding: 0;
+    }
+  }
+
+  &__grid {
+    @include vp-1239 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+
+  &-card {
+    & .carousel__dots {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin: 40px auto 0;
+    }
+
+    & .catalog__grid {
+      @include vp-1239 {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+      }
+    }
+
+    & .goods__top {
+      @include vp-1239 {
+        padding: 20px 15px 34px;
+      }
+    }
+
+    & .banner-first {
+      @include vp-1239 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 35px 15px;
+      }
+    }
+  }
+
+  & .banner-first {
+    &.banner-down {
+      @include vp-1239 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        min-height: 430px;
+        padding: 70px 35px;
+      }
+    }
+  }
+
+  &.banner-down {
+    & .banner-first__image {
+      @include vp-1239 {
+        width: 40%;
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+
+  & .sidebar .banner-down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}

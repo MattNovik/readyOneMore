@@ -1,0 +1,35 @@
+mixin popupCalculator()
+  #popupCalculate.footer__popup
+    .footer__popup__overflow
+    .footer__popup__content
+      .footer__popup__content__close.js-closecalculate
+      h2.footer__popup__title калькулятор цены
+      .row
+        .col-12
+          select.form__field(type='text', placeholder='Тип работы', name='work')
+            option(value='Вариант 1', disabled.checked) Тип работы
+            option(value='Вариант 2') Вариант 2
+            option(value='Вариант 3') Вариант 3
+            option(value='Вариант 4') Вариант 4
+        .col-12
+          input.form__field(type='text', placeholder='Тема *', name='theme')
+        .col-12
+          .footer__popup__content__label
+            | Стоимость без скидки:
+          .footer__popup__content__price
+            | От 600 рублей*
+            span
+              | (скидка до 700 рублей)
+          .footer__popup__content__sublabel
+            | * — точная стоимость будет определена после уточнения сроков сдачи работы, количества страниц и уровня исполнения.
+        .col-12
+          input.form__field(type='text', placeholder='ваш e-mail *', name='email')
+        .col-12
+          button.btn.btn-lg.btn-block.btn-primary
+            | Узнать стоимость
+        .col-12
+          .footer__popup__agreement
+            input#filter-agreement(type='checkbox', name='', checked)
+            label(for='filter-agreement')
+              | Нажимая кнопку "Рассчитать", вы соглашаетесь с
+              a(href='#') политикой конфиденциальности

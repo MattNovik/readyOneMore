@@ -1,0 +1,78 @@
+.title {
+  margin: 15px 0 10px;
+  color: $color-default-black;
+
+  &_h1 {
+    margin: 0;
+    font-size: 3rem;
+  line-height: 3.4375rem;
+  font-family: Geometria, Verdana, Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: $color-default-black;
+  margin-top: 10px;
+  }
+
+  &_h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: $ff-gotham-pro;
+    margin-bottom: 15px;
+  color: $color-default-black;
+  margin-top: 10px;
+  }
+
+  &_h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: $color-default-black;
+    font-weight: 900;
+    font-family: $ff-gotham-pro;
+  }
+
+  &_h4 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: $color-default-black;
+    font-weight: 900;
+    font-family: $ff-gotham-pro;
+  }
+
+  &_h5 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: $color-default-black;
+    font-family: Geometria, Verdana, Arial, sans-serif;
+  font-weight: 500;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_color {
+    &-white {
+      color: $color-default-white;
+    }
+  }
+
+  &_text {
+    display: inline;
+  }
+
+  &__icon {
+    margin-left: 10px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+}
