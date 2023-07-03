@@ -10,6 +10,7 @@ import initCalculateFormValidate from "./modules/initCalculateFormValidate";
 import createOwlCarouselReviews from './modules/createOwlCarouselReviews';
 import { initPopupHandlers } from './modules/initPopupHandlers.js';
 import initReviewsRating from "./modules/initReviewsRating.js";
+import initFileUploadsHandler from "./modules/initFileUploadsHandler.js";
 
 window.addEventListener('DOMContentLoaded', () => {
   // Utils
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     createOwlCarouselReviews();
     initReviewsRating();
     initPopupHandlers()
+    initFileUploadsHandler();
   });
 });
 

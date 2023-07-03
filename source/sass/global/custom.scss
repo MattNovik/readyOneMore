@@ -517,3 +517,11 @@ i.fas.fa-times.close-modal {
 .selectric {
   border-radius: 0 !important;
 }
+
+.selectric-form__field.error .selectric span {
+  color: #dc3545;
+}
+
+span.error {
+  display: none!important;
+}

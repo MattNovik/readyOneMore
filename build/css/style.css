@@ -5731,6 +5731,14 @@ i.fas.fa-times.close-modal {
   border-radius: 0 !important;
 }
 
+.selectric-form__field.error .selectric span {
+  color: #dc3545;
+}
+
+span.error {
+  display: none !important;
+}
+
 .banner-first {
   z-index: 1;
   -ms-flex-direction: column;
@@ -6517,6 +6525,55 @@ body .dropdown__count {
   font-family: inherit;
 }
 
+.form__textfield {
+  width: 100%;
+  min-height: 126px;
+  margin-bottom: 22px;
+  padding: 16px 26px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1;
+  color: #000000;
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+
+.form__textfield::-webkit-input-placeholder {
+  font-weight: 700;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.form__textfield::-moz-placeholder {
+  font-weight: 700;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.form__textfield:-ms-input-placeholder {
+  font-weight: 700;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.form__textfield::-ms-input-placeholder {
+  font-weight: 700;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.form__textfield::placeholder {
+  font-weight: 700;
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: inherit;
+}
+
 .form__field {
   width: 100%;
   margin-bottom: 13px;
@@ -6531,6 +6588,7 @@ body .dropdown__count {
   border: 1px solid #f32478;
   border-radius: 0;
   background: #ffffff;
+  text-transform: uppercase;
 }
 
 .form__field.error {
@@ -6618,9 +6676,6 @@ body .dropdown__count {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 1;
-  color: #000000;
-  border: 1px solid #abb5be;
-  border-radius: 6px;
   background: #ffffff;
   cursor: pointer;
 }
@@ -6691,56 +6746,6 @@ body .dropdown__count {
   font-weight: 400;
   font-family: "Proxima Nova", "Arial", sans-serif;
   text-transform: none;
-  color: #abb5be;
-}
-
-.form__textfield {
-  width: 100%;
-  min-height: 126px;
-  margin-bottom: 22px;
-  padding: 16px 26px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 16px;
-  line-height: 1;
-  color: #000000;
-  border: 1px solid #abb5be;
-  border-radius: 6px;
-  background: #ffffff;
-}
-
-.form__textfield::-webkit-input-placeholder {
-  font-weight: 700;
-  font-family: "Proxima Nova", "Arial", sans-serif;
-  text-transform: uppercase;
-  color: #abb5be;
-}
-
-.form__textfield::-moz-placeholder {
-  font-weight: 700;
-  font-family: "Proxima Nova", "Arial", sans-serif;
-  text-transform: uppercase;
-  color: #abb5be;
-}
-
-.form__textfield:-ms-input-placeholder {
-  font-weight: 700;
-  font-family: "Proxima Nova", "Arial", sans-serif;
-  text-transform: uppercase;
-  color: #abb5be;
-}
-
-.form__textfield::-ms-input-placeholder {
-  font-weight: 700;
-  font-family: "Proxima Nova", "Arial", sans-serif;
-  text-transform: uppercase;
-  color: #abb5be;
-}
-
-.form__textfield::placeholder {
-  font-weight: 700;
-  font-family: "Proxima Nova", "Arial", sans-serif;
-  text-transform: uppercase;
   color: #abb5be;
 }
 
@@ -10346,31 +10351,58 @@ body .dropdown__count {
   margin: 0;
 }
 
-.calculator .form__field {
+.calculator .form__field,
+.calculator .form__field-group-files {
   margin-bottom: 22px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 1.25rem;
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.calculator .form__field::-webkit-input-placeholder {
-  text-transform: capitalize;
+.calculator .form__field:after,
+.calculator .form__field-group-files:after {
+  font-size: 1.25rem;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.calculator .form__field::-moz-placeholder {
-  text-transform: capitalize;
+.calculator .form__field::-webkit-input-placeholder,
+.calculator .form__field-group-files::-webkit-input-placeholder {
+  text-transform: uppercase;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
 }
 
-.calculator .form__field:-ms-input-placeholder {
-  text-transform: capitalize;
+.calculator .form__field::-moz-placeholder,
+.calculator .form__field-group-files::-moz-placeholder {
+  text-transform: uppercase;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
 }
 
-.calculator .form__field::-ms-input-placeholder {
-  text-transform: capitalize;
+.calculator .form__field:-ms-input-placeholder,
+.calculator .form__field-group-files:-ms-input-placeholder {
+  text-transform: uppercase;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
 }
 
-.calculator .form__field::placeholder {
-  text-transform: capitalize;
+.calculator .form__field::-ms-input-placeholder,
+.calculator .form__field-group-files::-ms-input-placeholder {
+  text-transform: uppercase;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.calculator .form__field::placeholder,
+.calculator .form__field-group-files::placeholder {
+  text-transform: uppercase;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
 }
 
 .calculator .form__field__label {
@@ -10380,6 +10412,7 @@ body .dropdown__count {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: "PT Sans", "Arial", sans-serif;
   margin-bottom: 22px;
 }
 
@@ -10404,28 +10437,26 @@ body .dropdown__count {
   display: block;
 }
 
-.calculator__steps__item .selectric {
+.calculator__steps__item .selectric,
+.calculator__steps__item .selectric-below .selectric {
   border: solid 1px #f32478;
+  border-color: #f32478 !important;
   border-radius: 0;
 }
 
 .calculator__steps__item .selectric-form__field .selectric .label {
-  text-transform: none;
+  text-transform: uppercase;
   font-size: 20px;
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
 }
 
-.calculator__steps__item .btn {
-  margin-bottom: 22px;
-  border-radius: 0;
-  background-color: #141448;
-  border-color: #141448;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  font-family: "PT Sans", "Arial", sans-serif;
+.calculator__steps__item .selectric-form__field.error .selectric span {
+  color: #dc3545;
+}
+
+.calculator__steps__item .selectric-form__field.error .selectric .label {
+  color: #dc3545 !important;
 }
 
 .calculator__steps-wrapper {
@@ -10576,7 +10607,7 @@ body .dropdown__count {
 }
 
 .calculator__button-agreament-wrapper {
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
 .calculator__button-agreament-wrapper input.error + label {
@@ -10601,6 +10632,18 @@ body .dropdown__count {
 
 .calculator__button-wrapper button {
   display: none;
+}
+
+.calculator__button-wrapper .btn {
+  margin-bottom: 22px;
+  border-radius: 0;
+  background-color: #141448;
+  border-color: #141448;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .calculator__button-wrapper .btn-lg {
@@ -11067,6 +11110,22 @@ body .dropdown__count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.footer__popup .btn {
+  margin-bottom: 22px;
+  border-radius: 0;
+  background-color: #141448;
+  border-color: #141448;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.footer__popup a {
+  text-decoration: underline;
 }
 
 .footer__popup__overflow {
@@ -15937,10 +15996,6 @@ body .dropdown__count {
     margin-bottom: 100px;
   }
 
-  .calculator__steps__item .btn {
-    margin-bottom: 0;
-  }
-
   .calculator__button-wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -15949,6 +16004,10 @@ body .dropdown__count {
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
+  }
+
+  .calculator__button-wrapper .btn {
+    margin-bottom: 0;
   }
 
   .calculator__button-wrapper .btn-lg {
@@ -16044,6 +16103,10 @@ body .dropdown__count {
 
   .recomendation__video:after {
     display: block;
+  }
+
+  .footer__popup .btn {
+    margin-bottom: 0;
   }
 
   .footer__popup__content {

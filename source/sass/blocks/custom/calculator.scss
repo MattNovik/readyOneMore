@@ -26,20 +26,30 @@
     }
   }
 
-  & .form__field {
+  & .form__field,
+  & .form__field-group-files {
     margin-bottom: 22px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: 1.25rem;
     font-family: $ff-pt-sans;
 
+    &:after {
+      font-size: 1.25rem;
+      font-family: $ff-pt-sans;
+    }
+
     &::placeholder {
-      text-transform: capitalize;
+      text-transform: uppercase;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: 700;
     }
   }
 
   & .form__field__label {
     display: flex;
     align-items: center;
+    font-family: $ff-pt-sans;
 
     margin-bottom: 22px;
   }
@@ -70,33 +80,29 @@
         display: block;
       }
 
-      & .selectric {
+      & .selectric,
+      & .selectric-below .selectric {
         border: solid 1px $color-deep-cerise;
+        border-color: $color-deep-cerise !important;
         border-radius: 0;
       }
 
       & .selectric-form__field {
         & .selectric .label {
-          text-transform: none;
+          text-transform: uppercase;
           font-size: 20px;
           font-family: $ff-pt-sans;
           color: $color-default-black;
         }
-      }
 
-      & .btn {
-        margin-bottom: 22px;
-        border-radius: 0;
-        background-color: $color-paua;
-        border-color: $color-paua;
-        color: $color-default-white;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 1.25rem;
-        font-family: $ff-pt-sans;
+        &.error {
+          & .selectric span {
+            color: #dc3545;
+          }
 
-        @include media-breakpoint-up(md) {
-          margin-bottom: 0;
+          & .selectric .label {
+            color: #dc3545 !important;
+          }
         }
       }
     }
@@ -277,7 +283,7 @@
   }
 
   &__button-agreament-wrapper {
-    padding: 0 10px;
+    /* padding: 0 10px; */
 
     & input.error {
       & + label {
@@ -301,6 +307,22 @@
 
     & button {
       display: none;
+    }
+
+    & .btn {
+      margin-bottom: 22px;
+      border-radius: 0;
+      background-color: $color-paua;
+      border-color: $color-paua;
+      color: $color-default-white;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      font-family: $ff-pt-sans;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
     }
 
     & .btn-lg {

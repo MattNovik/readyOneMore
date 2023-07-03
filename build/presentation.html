@@ -25,7 +25,6 @@
               </div>
               <ul class="header__social social">
                 <li class="social__item"><a class="social__link" href="https://vk.com/referat"><img class="social__image" src="img/vk.png" alt=""></a></li>
-                <li class="social__item"><a class="social__link" href="https://vk.com/referat"><img class="social__image" src="img/ok.png" alt=""></a></li>
               </ul>
             </div>
             <div class="header__col header__center"><a class="header__link" href="/"><img class="header__logo" src="img/logo_gr.svg" alt=""></a></div>
@@ -71,40 +70,41 @@
                 <div class="calculator__desc">Выбор работы</div>
                 <div class="calculator__steps">
                   <form id="calculatorForm" action="">
+                    <input type="hidden" name="form_name" value="Многошаговая форма">
                     <div class="calculator__steps__item current">
-                      <select class="form__field" type="text" placeholder="Тип работы" name="work">
-                        <option value="Вариант 1" disabled.checked>Тип работы</option>
+                      <select class="form__field set-default js-required validate" id="multiStepTPW" type="text" placeholder="Тип работы" name="type_of_work_raw">
+                        <option value="Вариант 1" disabled selected>Тип работы</option>
                         <option value="Вариант 2">Вариант 2</option>
                         <option value="Вариант 3">Вариант 3</option>
                         <option value="Вариант 4">Вариант 4</option>
                       </select>
-                      <input class="form__field js-required" type="text" placeholder="Предмет *" name="subject">
-                      <input class="form__field" type="text" placeholder="Тема " name="theme">
-                      <input id="filter-agreement" type="checkbox" name="" checked>
-                      <label class="form__field__label" for="filter-agreement">Нажимая кнопку "Узнать стоимость", вы соглашаетесь с <a href="">политикой конфиденциальности</a>
-                      </label>
-                      <div class="calculator__row">
-                        <button class="btn btn-lg btn-block btn-primary text-uppercase js-steps-next" type="button" required>Продолжить</button>
-                      </div>
+                      <input class="form__field js-required" id="multiStepCourse" type="text" placeholder="Предмет" name="subject">
+                      <input class="form__field js-required" id="multiStepTheme" type="text" placeholder="Тема *" name="theme">
                     </div>
                     <div class="calculator__steps__item">
-                      <label class="form__field-group-files" for="file-upload" data-placeholder="Прикрепите файл">
+                      <label class="form__field form__field-group-files" for="file-upload" data-placeholder="Прикрепите файл">
                         <input id="file-upload" name="files" multiple type="file" placeholder="Прикрепите файл">
                       </label>
                       <div class="form__files-list" id="file-upload-list"></div>
-                      <textarea class="form__textfield" placeholder="Введите доп. требования" name="comment"></textarea>
-                      <div class="calculator__row">
-                        <button class="btn btn-lg btn-block btn-primary text-uppercase js-steps-next" type="button" required>Продолжить</button>
-                        <button class="btn btn-lg btn-block btn-outline-primary text-uppercase js-steps-next" type="button">Пропустить</button>
-                      </div>
+                      <textarea class="form__field form__textfield" placeholder="Введите доп. требования" name="comment"></textarea>
                     </div>
                     <div class="calculator__steps__item">
                       <input class="form__field js-required" type="text" placeholder="ваше имя *" name="name">
                       <input class="form__field js-required" type="text" placeholder="ваш e-mail *" name="email">
                       <input class="form__field js-required" id="phonefield" type="text" placeholder="+7 (___) ___-__-__ *" name="phone">
-                      <div class="calculator__row">
+                    </div>
+                    <div class="row calculator__button-agreament-wrapper">
+                      <input id="filter-agreement" type="checkbox" name="agreement" checked="checked">
+                      <label class="form__field__label" for="filter-agreement" style="display: inline-block">
+                        Нажимая кнопку 'Узнать стоимость',
+                        вы соглашаетесь с <a href="/politika-konfidencialnosti/">политикой конфиденциальности</a>
+                      </label>
+                      <div class="col-12 col-md-4 calculator__button-wrapper">
+                        <button class="btn btn-lg btn-block btn-primary text-uppercase js-steps-next current" type="button" required>Продолжить</button>
+                        <button class="btn btn-lg btn-block btn-outline-primary text-uppercase js-steps-next" type="button">Пропустить</button>
                         <button class="btn btn-lg btn-block btn-primary text-uppercase js-steps-submit" type="submit">Отправить</button>
                       </div>
+                      <div class="calculator__steps-wrapper"></div>
                     </div>
                   </form>
                 </div>
@@ -475,13 +475,26 @@
               </div>
               <div class="col-12">
                 <div class="footer__popup__agreement">
-                  <input id="filter-agreement" type="checkbox" name="" checked>
-                  <label for="filter-agreement">Нажимая кнопку "Рассчитать", вы соглашаетесь с<a href="#">политикой конфиденциальности</a></label>
+                  <input id="filter-agreementPopup" type="checkbox" name="" checked>
+                  <label for="filter-agreementPopup">Нажимая кнопку "Рассчитать", вы соглашаетесь с<a href="#">политикой конфиденциальности</a></label>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <script type="text/javascript">
+          (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+          (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+          
+          ym(46159971, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+          });
+          var YM_COD = 46159971;
+        </script>
       </footer>
     </div>
     <script src="js/main.min.js"></script>

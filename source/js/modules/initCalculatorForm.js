@@ -20,7 +20,7 @@ const initCalculatorForm = () => {
     if (getStep() === countSteps) return false;
 
     if (!!$(item.target).attr("required") && !validateStep()) return false;
-
+    console.log('heree')
     step++;
     setMenuCurrent();
     setStepCurrent();
@@ -39,6 +39,7 @@ const initCalculatorForm = () => {
 
     return false;
   });
+
   const validator = $("#calculatorForm").validate({
     onsubmit: false,
     rules: {

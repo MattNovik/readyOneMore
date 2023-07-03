@@ -18,6 +18,30 @@
     font-family: inherit;
   }
 
+  &__textfield {
+    width: 100%;
+    min-height: 126px;
+    margin-bottom: 22px;
+    padding: 16px 26px;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    line-height: 1;
+
+    color: $color-default-black;
+    border: 1px solid $color-default-black;
+    background: $color-default-white;
+
+    &::placeholder {
+      font-weight: 700;
+      font-family: $ff-proxima-nova;
+
+      text-transform: uppercase;
+
+      color: inherit;
+    }
+  }
+
   &__field {
     width: 100%;
     margin-bottom: 13px;
@@ -32,6 +56,7 @@
     border: 1px solid $color-deep-cerise;
     border-radius: 0;
     background: $color-default-white;
+    text-transform: uppercase;
 
     &.error {
       border-color: $red;
@@ -44,9 +69,7 @@
     &::placeholder {
       font-weight: 700;
       font-family: $ff-proxima-nova;
-
       text-transform: uppercase;
-
       color: $color-heather;
     }
 
@@ -80,9 +103,6 @@
       font-size: 16px;
       line-height: 1;
 
-      color: $color-default-black;
-      border: 1px solid $color-heather;
-      border-radius: 6px;
       background: $color-default-white;
       cursor: pointer;
 
@@ -131,31 +151,6 @@
 
         color: $color-heather;
       }
-    }
-  }
-
-  &__textfield {
-    width: 100%;
-    min-height: 126px;
-    margin-bottom: 22px;
-    padding: 16px 26px;
-    box-sizing: border-box;
-
-    font-size: 16px;
-    line-height: 1;
-
-    color: $color-default-black;
-    border: 1px solid $color-heather;
-    border-radius: 6px;
-    background: $color-default-white;
-
-    &::placeholder {
-      font-weight: 700;
-      font-family: $ff-proxima-nova;
-
-      text-transform: uppercase;
-
-      color: $color-heather;
     }
   }
 
