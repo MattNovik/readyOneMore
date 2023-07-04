@@ -1,3 +1,6 @@
+// перенесено из старой сборки, надо разобраться глубже что и для чего
+// Скорей всего работа с отправками заказов в crm
+
 const initScript = () => {
   const $modalCO = $('#createOrder');
   const popupDownload = $('#popup-download');
@@ -21,39 +24,39 @@ const initScript = () => {
     document.querySelector('body').style.overflow = 'visible';
   }
 
-  function loadLKUserInfo(userData) {
-    if (!userData) {
-      $('.js-profile-link').html('Личный кабинет');
-    } else {
-      LK_USER = userData;
-      $('.js-profile-link').html(userData.name).attr('href', userData.link);
+/*     function loadLKUserInfo(userData) {
+      if (!userData) {
+        $('.js-profile-link').html('Личный кабинет');
+      } else {
+        LK_USER = userData;
+        $('.js-profile-link').html(userData.name).attr('href', userData.link);
+      }
     }
-  }
 
-  function createOrder(orderId, theme) {
-    // $("#popup-download").modal({backdrop: 'static', keyboard: false});
-    popupDownload.find('.js-theme').html(theme);
-    popupDownload.data('orderId', orderId);
+    function createOrder(orderId, theme) {
+      // $("#popup-download").modal({backdrop: 'static', keyboard: false});
+      popupDownload.find('.js-theme').html(theme);
+      popupDownload.data('orderId', orderId);
 
-    // if (LK_USER) {
-    //     makeOrder(orderId, LK_USER.email);
-    //     return;
-    // }
+      // if (LK_USER) {
+      //     makeOrder(orderId, LK_USER.email);
+      //     return;
+      // }
 
-    popupDownload.find('.js-message').hide();
-    popupDownload.find('.modal-footer, .close, .js-email').show();
-  }
-
-  function createOrderFromModal() {
-    var email = popupDownload.find('#new-order-email')[0];
-    if (!email.checkValidity()) {
-      return;
+      popupDownload.find('.js-message').hide();
+      popupDownload.find('.modal-footer, .close, .js-email').show();
     }
-    var submitBtn = popupDownload.find('button[type="submit"]');
-    submitBtn.prop('disabled', true);
-    makeOrder(popupDownload.data('orderId'), email.value);
-    submitBtn.prop('disabled', false);
-  }
+
+    function createOrderFromModal() {
+      var email = popupDownload.find('#new-order-email')[0];
+      if (!email.checkValidity()) {
+        return;
+      }
+      var submitBtn = popupDownload.find('button[type="submit"]');
+      submitBtn.prop('disabled', true);
+      makeOrder(popupDownload.data('orderId'), email.value);
+      submitBtn.prop('disabled', false);
+    }
 
   function makeOrder(orderId, email) {
     popupDownload.find('.modal-footer, .close, .js-email').hide();
@@ -90,7 +93,7 @@ const initScript = () => {
         .html('Произошла ошибка, повторите попытку!')
         .show();
     });
-  }
+  } */
 
   $(function () {
     $('.selectize').select2({

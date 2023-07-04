@@ -7,5 +7,5 @@ import "owl.carousel";
 import "jquery-validation";
 import 'select2';
 import "./vendor/jquery.selectric.min.js";
-/* import './vendor/messages_ru';
-import './vendor/select2_ru'; */
+import './vendor/messages_ru';
+import './vendor/select2_ru';

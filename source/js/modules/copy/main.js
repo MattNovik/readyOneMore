@@ -1,4 +1,12 @@
+// перенесено из старой сборки, надо разобраться глубже что и для чего
+// Скорей всего иницируется и запускается карусель
+
 const initMain = () => {
+  const hamburgers = document.querySelectorAll(".hamburger");
+  const wrap = document.querySelector('.wrapper');
+  const body = document.querySelector('body');
+  const nav = document.querySelector('nav');
+
   function stepsCarousel() {
 
     var slider = $('.steps-carousel-js');
@@ -273,10 +281,6 @@ const initMain = () => {
 
   }
 
-  var hamburgers = document.querySelectorAll(".hamburger");
-  var wrap = document.querySelector('.wrapper');
-  var body = document.querySelector('body');
-  var nav = document.querySelector('nav');
 
   function hamburgerMenu() {
     if (hamburgers.length > 0) {

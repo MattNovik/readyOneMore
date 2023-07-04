@@ -9,7 +9,7 @@ const compilePug = () => {
     .pipe(plumber())
     .pipe(pug({ pretty: true }))
     .pipe(cached("pug"))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("../newBuild"));
 };
 
 export default compilePug;
