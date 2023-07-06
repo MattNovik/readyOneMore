@@ -19,7 +19,7 @@ const refresh = (done) => {
 
 const syncServer = () => {
   server.init({
-    server: "../newBuild/",
+    server: "../../public/build",
     index: "sitemap.html",
     notify: false,
     open: true,

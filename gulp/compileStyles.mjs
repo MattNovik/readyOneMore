@@ -21,9 +21,9 @@ const compileStyles = () =>
       ])
     )
     .pipe(gcmq()) // выключите, если в проект импортятся шрифты через ссылку на внешний источник
-    .pipe(gulp.dest("../newBuild/css"))
+    .pipe(gulp.dest("../../public/buildcss"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("../newBuild/css", { sourcemaps: "." }));
+    .pipe(gulp.dest("../../public/buildcss", { sourcemaps: "." }));
 
 export default compileStyles;
