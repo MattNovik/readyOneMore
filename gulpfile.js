@@ -10,7 +10,7 @@ import pug from "./gulp/compilePug.mjs";
 const server = browserSync.create();
 const streamStyles = () => styles().pipe(server.stream());
 const clean = () => {
-  return del(["../newBuild"], { force: true });
+  return del(["../../public/build"], { force: true });
 };
 const refresh = (done) => {
   server.reload();
